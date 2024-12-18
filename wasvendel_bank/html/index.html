@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- MAIN MENU -->
+    <div class="container">
+        <div class="wallet-menu" id="walletMenu" style="display:none;">
+            <p>Your Wallet: </p>
+            <span id="wallet-price">$0.0</span>
+        </div>
+    
+        <div class="purchase-menu" id="purchaseMenu" style="display:none;">
+            <div class="item">
+                <p id="bank-name">Apple</p>
+            </div>
+            <div class="basic-panel">
+                <div class="price" id="priceContainer">
+                    <span id="unit-price">$0.0</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="deposit-button-open">DEPOSIT</button>
+                <button id="whitdraw-button-open">WITHDRAW</button>
+                <button id="transfer-button-open">TRANSFER</button>
+                <button id="inventory-button-open">STORAGE</button>
+                <button id="cancel-button">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- DEPOSIT -->
+    <div class="deposit-menu" id="depositMenu" style="display:none;">
+        <div class="item">
+            <p id="bank-name">DEPOSIT MONEY</p>
+        </div>
+        <div class="basic-panel">
+            <div class="price" id="priceContainer">            
+                <img id="left-arrow" src="img/left.png" alt="Decrease">
+                <input type="number" id="quantity" value="0.0" min="0.0">
+                <img id="right-arrow" src="img/right.png" alt="Increase">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="deposit-button-action">DEPOSIT</button>
+            <button id="cancel-button2">CLOSE</button>
+        </div>
+    </div>
+    <!-- WITHDRAW -->
+    <div class="whitdraw-menu" id="whitdrawMenu" style="display:none;">
+        <div class="item">
+            <p id="bank-name">WITHDRAW</p>
+            <p id="bank-smalltext">The bank charges a 5% withdrawal fee!</p>
+        </div>
+        <div class="basic-panel">
+            <div class="price" id="priceContainer">            
+                <img id="left-arrow2" src="img/left.png" alt="Decrease">
+                <input type="number" id="quantity2" value="0.0" min="0.0">
+                <img id="right-arrow2" src="img/right.png" alt="Increase">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="whitdraw-button-action">WITHDRAW</button>
+            <button id="cancel-button3">CLOSE</button>
+        </div>
+    </div>
+
+    <!-- TRANSFER -->
+    <div class="transfer-menu" id="transferMenu" style="display:none;">
+        <div class="item">
+            <p id="bank-name">TRANSFER</p>
+            <p id="bank-smalltext">The bank charges a 5% transfer fee!</p>
+            <div class="bankswitch-panel">
+                <p id = "bank-list"></p>
+            </div>
+        </div>
+        <div class="basic-panel">
+            <div class="price" id="priceContainer">            
+                <img id="left-arrow3" src="img/left.png" alt="Decrease">
+                <input type="number" id="quantity3" value="0.0" min="0.0">
+                <img id="right-arrow3" src="img/right.png" alt="Increase">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="transfer-button-action">TRANSFER</button>
+            <button id="cancel-button4">CLOSE</button>
+        </div>
+    </div>
+
+    <!-- STORAGE -->
+    <div class="storage-menu" id="storageMenu" style="display:none;">
+        <div class="item">
+            <p id="bank-name">BANK STORAGE</p>
+            <p id="bank-smalltext"></p>
+        </div>
+        <div class="basic-panel"></div>
+        <div class="buttons">
+            <button id="inventory-button-action">OPEN</button>
+            <button id="storagemanage-button-action">MANAGE</button>
+            <button id="cancel-button5">CLOSE</button>
+        </div>
+    </div>
+
+    <div class="storagemanagement-menu" id="storagemanagementMenu" style="display:none;">
+        <div class="item">
+            <p id="bank-name">BANK STORAGE MANAGEMENT</p>
+            <p id="bank-smalltext">Manage your storage</p>
+        </div>
+        <div class="basic-panel"></div>
+        <div class="buttons">
+            <button id="inventorybuy-button-action">BUY A STORAGE</button>
+            <div class="basic-panel"></div>
+
+            <!-- Custom dropdown for storage upgrades -->
+            <div class="custom-dropdown" id="upgrade-dropdown">
+                <div class="dropdown-selected" id="selected-upgrade">IMPROVE</div>
+                <div class="dropdown-options" id="dropdown-options" style="display: none;"></div>
+            </div>
+    
+            <button id="upgrade-button">UPGRADE</button>
+            <button id="cancel-button6">CLOSE</button>
+        </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Creator: wasvendel -->

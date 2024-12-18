@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: crock;
+    src: url(crock.ttf) format('truetype');
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+body {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+}
+
+/* Container to hold both menus */
+.container {
+    position: relative;
+}
+
+/* Main menu */
+.purchase-menu {
+    position: relative;
+    width: 300px;
+    background-image: url('img/background.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px;
+    text-align: center;
+    animation: fadeInScale 0.4s forwards;
+    animation: fadeOut 0.4s forwards;
+}
+
+/* Wallet menu */
+.wallet-menu {
+    position: absolute;
+    width: 100px;
+    background-image: url('img/background.png');
+    background-size: 100% 33%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    text-align: center;
+    right: calc(100% + 3px);
+    top: 23vw;
+    font-family: crock;
+    animation: fadeInScale 0.4s forwards;
+    animation: fadeOut 0.4s forwards;
+}
+
+/* Deposit menu */
+.deposit-menu {
+    position: relative;
+    width: 300px;
+    background-image: url('img/background.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px;
+    text-align: center;
+    animation: fadeInScale 0.4s forwards;
+    animation: fadeOut 0.4s forwards;
+}
+
+/* Whitdraw menu */
+.whitdraw-menu {
+    position: relative;
+    width: 300px;
+    background-image: url('img/background.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px;
+    text-align: center;
+    animation: fadeInScale 0.4s forwards;
+    animation: fadeOut 0.4s forwards;
+}
+
+/* Storage menu */
+.storage-menu {
+    position: relative;
+    width: 300px;
+    background-image: url('img/background.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px;
+    text-align: center;
+    animation: fadeInScale 0.4s forwards;
+    animation: fadeOut 0.4s forwards;
+}
+
+/* Storagemanagement menu */
+.storagemanagement-menu {
+    position: relative;
+    width: 300px;
+    background-image: url('img/background.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px;
+    text-align: center;
+    animation: fadeInScale 0.4s forwards;
+    animation: fadeOut 0.4s forwards;
+}
+
+/* Transfer menu */
+.transfer-menu {
+    position: relative;
+    width: 300px;
+    background-image: url('img/background.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px;
+    text-align: center;
+    animation: fadeInScale 0.4s forwards;
+    animation: fadeOut 0.4s forwards;
+}
+
+/* All */
+.basic-panel {
+    position: relative; 
+    padding: 1px 0;  
+    margin-bottom: 15px; 
+    font-family: crock;
+}
+
+.basic-panel::before,
+.basic-panel::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;  /* Állítsd be a kívánt vastagságot */
+    background-image: url('img/bgPanel.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bankswitch-panel {
+    position: relative; 
+    padding: 1px 0;  
+    margin-bottom: 15px; 
+    font-family: crock;
+}
+
+
+.bankswitch-panel::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;  /* Állítsd be a kívánt vastagságot */
+    background-image: url('img/bgPanel.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.strip {
+    position: relative; 
+    padding: 1px 0;  
+    margin-bottom: 15px; 
+    font-family: crock;
+}
+
+.strip::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;  /* Állítsd be a kívánt vastagságot */
+    background-image: url('img/bgPanel.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.basic-panel::before {
+    top: 0;
+}
+
+.basic-panel::after {
+    bottom: 0; 
+}
+
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "crock";
+    font-size: 48px;
+    color: #fff;
+    margin: 15px 0;
+}
+
+.price span {
+    margin: 0 5px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+#bank-name {
+    font-family: crock;
+    font-size: 1.2vw;  
+}
+
+#bank-smalltext {
+    font-family: crock;
+    font-size: 0.8vw;  
+}
+
+#item-image {
+    width: 2vw;
+    height: auto;
+}
+
+.item img {
+    width: 50px;
+}
+
+
+#left-arrow,
+#right-arrow,
+#left-arrow2,
+#right-arrow2, 
+#left-arrow3,
+#right-arrow3{
+    cursor: pointer;
+    width: 30px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#left-switchbank,
+#right-switchbank {
+    cursor: pointer;
+    width: 30px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#unit-price {
+    font-family: crock;
+    color: rgb(255, 255, 255);
+}
+
+#bankName {
+    font-size: 35px;
+    color: white;
+    font-family: crock;
+    width: 220px; /* Állítsd be a kívánt szélességet */
+    height: 50px; /* Állítsd be a kívánt magasságot */
+    text-align: center;
+    border: none;
+    background-color: transparent; /* Átlátszó háttér */
+}
+
+
+
+.wallet-menu p, .wallet-menu span {
+    font-size: 14px; /* Csökkentjük a betűméretet, hogy elférjen a tartalom */
+    margin: 0;
+    padding: 0;
+    font-family: crock;
+    line-height: 1.4; /* Javítjuk a szövegek közötti sortávolságot */
+}
+
+.wallet-menu span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#quantity,
+#quantity2, 
+#quantity3 {
+    font-size: 48px;
+    color: white;
+    font-family: crock;
+    width: 220px; /* Állítsd be a kívánt szélességet */
+    height: 50px; /* Állítsd be a kívánt magasságot */
+    text-align: center;
+    border: none;
+    background-color: transparent; /* Átlátszó háttér */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;  /* Ez biztosítja, hogy a gombok egymás alatt legyenek */
+    gap: 10px;  /* Ez biztosít egy kis helyet a gombok között */
+    padding-bottom: 2vw;
+}
+
+button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-image: url('img/close_button.png');
+    background-size: cover;  /* Biztosítja, hogy a kép megfelelően kitöltse a gombot */
+    background-color: transparent;  /* Nincs háttérszín */
+    width: 100%;  /* Gomb szélessége a szülőhöz igazodik */
+    height: 50px; /* Állíts be egy megfelelő magasságot a gombokra */
+    font-family: crock;
+}
+
+button:hover {
+    background-image: url('img/close_button_red.png');
+    background-color: transparent;  /* Hover állapotban sincs háttérszín */
+}
+
+button:focus {
+    outline: none;  /* Eltávolítja az alapértelmezett fókusz kijelölést */
+}
+
+#bank-list {
+    font-family: crock;
+    text-align: center; /* Középre igazítás */
+}
+
+#bank-list ul {
+    list-style-type: none; /* Eltávolítja a lista pontokat */
+    padding-left: 0; /* Eltávolítja a bal oldali kitöltést */
+}
+
+#bank-list li {
+    padding: 5px 0; /* Kicsi távolság a listaelemek között */
+    cursor: pointer; /* Mutatja, hogy kattintható */
+    color: white;
+    border: none;
+    font-size: 20px;
+    text-shadow: 2px 2px #000000;
+    background-image: url('img/close_button.png'); /* Háttérkép beállítása */
+    background-size: cover; /* A kép kitöltse a gombot */
+    background-color: transparent; /* Nincs háttérszín */
+    width: 100%; /* Gomb szélessége a szülőhöz igazodik */
+    height: 40px; /* Gombok magassága */
+    font-family: crock;
+    text-align: center; /* Szöveg középre igazítása a gombon belül */
+    display: flex;
+    align-items: center; /* Vertikális középre igazítás */
+    justify-content: center; /* Horizontális középre igazítás */
+}
+
+#bank-list li:hover {
+    background-image: url('img/close_button_red.png');
+    background-color: transparent;  /* Hover állapotban sincs háttérszín */
+}
+
+#bank-list li.selected {
+    background-image: url('img/close_button_gold.png');
+    background-color: transparent;  /* Hover állapotban sincs háttérszín */
+}
+
+/* Custom Dropdown */
+.custom-dropdown {
+    position: relative;
+    justify-content: center;
+    width: 200px;
+    left: 15%;
+    color: white;
+    font-family: crock;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dropdown-selected {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.dropdown-options {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border: 1px solid white;
+    display: none;
+    z-index: 100;
+}
+
+.dropdown-options div {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-options div:hover {
+    background-color: #555;
+}
